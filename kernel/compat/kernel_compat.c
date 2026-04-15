@@ -168,7 +168,7 @@ void *ksu_compat_kvrealloc(const void *p, size_t oldsize, size_t newsize,
 	if (!newp)
 		return NULL;
 	memcpy(newp, p, oldsize);
-	kvfree((void *)p);
+	kvfree(p);
 	return newp;
 }
 #endif
